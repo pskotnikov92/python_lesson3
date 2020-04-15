@@ -39,33 +39,33 @@ str_total = str_total.replace('»', replace)
 
 print(str_total)
 
-    #Выводим текст в виде строки без знаков препинания
+#1/Выводим текст в виде строки без знаков препинания
 
 str_total = str_total.split()
 print(str_total)
 
-    #Формируем list со словами методом split
+#2/Формируем list со словами методом split
 
 new_str_total = list(map(lambda str_total: str_total.lower(), str_total))
 print(new_str_total)
 
-    #Приводим все слова к нижнему регистру через функцию map
+#3/Приводим все слова к нижнему регистру через функцию map
 
 x_dict = {} #Создаем словарь
 for i in range(len(new_str_total)): # len Возвращает число элементов в указанном объекте.
     x_dict[new_str_total[i]] = new_str_total.count(new_str_total[i]) #ключ = значение (count Возвращает количество вхождений указанного значения в список)
 print(x_dict)
 
-    #Выводим слова и количество их появлений в тексте
+#4/Выводим слова и количество их появлений в тексте
 
 x_dict = sorted(x_dict.items(), key=lambda para: para[1], reverse = True)
 for i in range(5):
     print(x_dict[i])
 
-    #Выводим 5 самых частых слов
+#5/Выводим 5 самых частых слов
 
-set_5 = len(set(new_str_total)) # set длина списка уникальных слов
+set_5 = len(set(new_str_total)) #set список уникальных слов
 print(set_5)
 
-    #Выводим кол-во уникальных слов
+#5/Выводим кол-во уникальных слов
 
