@@ -41,8 +41,8 @@ print(str_total)
 
     #Выводим текст в виде строки без знаков препинания
 
-new_str_total = str_total.split()
-print(new_str_total)
+str_total = str_total.split()
+print(str_total)
 
     #Формируем list со словами методом split
 
@@ -56,11 +56,16 @@ for i in range(len(new_str_total)): # len Возвращает число эле
     x_dict[new_str_total[i]] = new_str_total.count(new_str_total[i]) #ключ = значение (count Возвращает количество вхождений указанного значения в список)
 print(x_dict)
 
-    #word = (list(sorted(x_dict.values(), reverse=True))) #обращаемся ко всем значениям словаря
+    #Выводим слова и количество их появлений в тексте
 
-sort_list = list(x_dict.items())
-sort_list.sort(key = lambda i: i[1],reverse = True)
-print(sort_list[:5])
+x_dict = sorted(x_dict.items(), key=lambda para: para[1], reverse = True)
+for i in range(5):
+    print(x_dict[i])
 
-print('Количество уникальных (разных) слов в тексте', len(set(new_str_total))) # set длина списка уникальных слов
+    #Выводим 5 самых частых слов
+
+set_5 = len(set(new_str_total)) # set длина списка уникальных слов
+print(set_5)
+
+    #Выводим кол-во уникальных слов
 
